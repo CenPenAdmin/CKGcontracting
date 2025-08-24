@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Renovation Simulator - Custer & Kinney General Contracting LLC</title>
+    <meta name="description" content="Try our home renovation simulator to visualize changes to your property before starting your project.">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="nav-logo">
+                    <h2>Custer & Kinney</h2>
+                    <span>General Contracting LLC</span>
+                </div>
+                <ul class="nav-menu">
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="about.html" class="nav-link">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="projects.html" class="nav-link">Projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="simulator.html" class="nav-link active">Simulator</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="contact.html" class="nav-link">Contact</a>
+                    </li>
+                </ul>
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="page-hero">
+            <div class="container">
+                <h1>Home Renovation Simulator</h1>
+                <p>Upload a photo of your home and try different renovation options</p>
+            </div>
+        </section>
+
+        <section class="simulator-section">
+            <div class="container">
+                <div class="simulator-container">
+                    <!-- Upload Section -->
+                    <div class="upload-section">
+                        <div class="upload-area" id="upload-area">
+                            <i class="fas fa-cloud-upload-alt"></i>
+                            <h3>Upload Your Home Photo</h3>
+                            <p>Drag and drop an image or click to browse</p>
+                            <input type="file" id="image-upload" accept="image/*" hidden>
+                            <button class="btn btn-primary" onclick="document.getElementById('image-upload').click()">
+                                Choose File
+                            </button>
+                        </div>
+                        <div class="upload-tips">
+                            <h4>Tips for best results:</h4>
+                            <ul>
+                                <li>Use a clear, front-facing photo of your home</li>
+                                <li>Ensure good lighting and contrast</li>
+                                <li>Avoid shadows or obstructions</li>
+                                <li>JPG or PNG format recommended</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Preview and Tools Section -->
+                    <div class="preview-section" id="preview-section" style="display: none;">
+                        <div class="image-container">
+                            <div class="image-wrapper">
+                                <img id="preview-image" src="" alt="Uploaded home image">
+                                <div id="deck-overlay" class="deck-overlay" style="display: none;">
+                                    <img src="images/deck-overlay.png" alt="Deck overlay">
+                                </div>
+                                <div id="color-overlay" class="color-overlay"></div>
+                            </div>
+                        </div>
+
+                        <div class="tools-panel">
+                            <h3>Renovation Tools</h3>
+                            
+                            <!-- Paint/Siding Color Tools -->
+                            <div class="tool-group">
+                                <h4><i class="fas fa-paint-brush"></i> Paint & Siding Colors</h4>
+                                <div class="color-options">
+                                    <button class="color-btn" data-color="none" style="background: linear-gradient(45deg, #fff, #f0f0f0);">Original</button>
+                                    <button class="color-btn" data-color="blue" style="background: #4A90E2;">Blue</button>
+                                    <button class="color-btn" data-color="green" style="background: #7ED321;">Green</button>
+                                    <button class="color-btn" data-color="red" style="background: #D0021B;">Red</button>
+                                    <button class="color-btn" data-color="gray" style="background: #9B9B9B;">Gray</button>
+                                    <button class="color-btn" data-color="brown" style="background: #8B4513;">Brown</button>
+                                    <button class="color-btn" data-color="cream" style="background: #F5F5DC;">Cream</button>
+                                    <button class="color-btn" data-color="white" style="background: #FFFFFF;">White</button>
+                                </div>
+                                <div class="intensity-control">
+                                    <label for="color-intensity">Color Intensity:</label>
+                                    <input type="range" id="color-intensity" min="0" max="100" value="30">
+                                    <span id="intensity-value">30%</span>
+                                </div>
+                            </div>
+
+                            <!-- Deck Addition -->
+                            <div class="tool-group">
+                                <h4><i class="fas fa-layer-group"></i> Add Deck</h4>
+                                <button class="btn btn-secondary" id="toggle-deck">
+                                    <span id="deck-text">Add Deck</span>
+                                </button>
+                                <p class="tool-description">Add a deck to enhance your outdoor living space</p>
+                            </div>
+
+                            <!-- Reset and Save -->
+                            <div class="tool-group">
+                                <h4><i class="fas fa-tools"></i> Actions</h4>
+                                <div class="action-buttons">
+                                    <button class="btn btn-outline" id="reset-changes">Reset All</button>
+                                    <button class="btn btn-primary" id="save-simulation">Save Design</button>
+                                </div>
+                            </div>
+
+                            <!-- Contact CTA -->
+                            <div class="tool-group cta-group">
+                                <h4>Like what you see?</h4>
+                                <p>Contact us for a free estimate on your renovation project!</p>
+                                <a href="contact.html" class="btn btn-success">Get Free Estimate</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="simulator-info">
+            <div class="container">
+                <h2>How It Works</h2>
+                <div class="steps-grid">
+                    <div class="step">
+                        <div class="step-number">1</div>
+                        <h3>Upload Photo</h3>
+                        <p>Upload a clear photo of your home's exterior</p>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">2</div>
+                        <h3>Try Options</h3>
+                        <p>Experiment with different colors and add-ons</p>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">3</div>
+                        <h3>Save & Contact</h3>
+                        <p>Save your design and contact us for an estimate</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Custer & Kinney</h3>
+                    <p>General Contracting LLC</p>
+                    <p>Serving West Virginia with quality construction services since 2003.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="index.html#services">Home Renovations</a></li>
+                        <li><a href="index.html#services">New Construction</a></li>
+                        <li><a href="index.html#services">Roofing & Siding</a></li>
+                        <li><a href="index.html#services">Deck & Patio</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <p><i class="fas fa-phone"></i> (304) 555-0123</p>
+                    <p><i class="fas fa-envelope"></i> info@custerkinney.com</p>
+                    <p><i class="fas fa-map-marker-alt"></i> West Virginia</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Follow Us</h4>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Custer & Kinney General Contracting LLC. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/simulator.js"></script>
+</body>
+</html>

@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Custer & Kinney General Contracting LLC</title>
+    <meta name="description" content="Contact Custer & Kinney General Contracting LLC for your construction and renovation needs in West Virginia.">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="nav-logo">
+                    <h2>Custer & Kinney</h2>
+                    <span>General Contracting LLC</span>
+                </div>
+                <ul class="nav-menu">
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="about.html" class="nav-link">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="projects.html" class="nav-link">Projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="simulator.html" class="nav-link">Simulator</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="contact.html" class="nav-link active">Contact</a>
+                    </li>
+                </ul>
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="page-hero">
+            <div class="container">
+                <h1>Contact Us</h1>
+                <p>Ready to start your next construction project? Get in touch with our team.</p>
+            </div>
+        </section>
+
+        <section class="contact-section">
+            <div class="container">
+                <div class="contact-grid">
+                    <!-- Contact Form -->
+                    <div class="contact-form-container">
+                        <h2>Get a Free Estimate</h2>
+                        
+                        <!-- Success/Error Messages -->
+                        <div id="success-message" class="message success-message" style="display: none;">
+                            <i class="fas fa-check-circle"></i>
+                            <p>Thank you! Your message has been sent successfully. We'll get back to you within 24 hours.</p>
+                        </div>
+                        
+                        <div id="error-message" class="message error-message" style="display: none;">
+                            <i class="fas fa-exclamation-triangle"></i>
+                            <p>Sorry, there was an error sending your message. Please try again or call us directly.</p>
+                        </div>
+
+                        <form class="contact-form" action="php/contact.php" method="POST" id="contact-form">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="name">Full Name *</label>
+                                    <input type="text" id="name" name="name" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="email">Email Address *</label>
+                                    <input type="email" id="email" name="email" required>
+                                </div>
+                            </div>
+                            
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="phone">Phone Number</label>
+                                    <input type="tel" id="phone" name="phone">
+                                </div>
+                                <div class="form-group">
+                                    <label for="service">Service Needed</label>
+                                    <select id="service" name="service">
+                                        <option value="">Select a service</option>
+                                        <option value="home-renovation">Home Renovation</option>
+                                        <option value="new-construction">New Construction</option>
+                                        <option value="roofing-siding">Roofing & Siding</option>
+                                        <option value="painting">Painting</option>
+                                        <option value="deck-patio">Deck & Patio</option>
+                                        <option value="general-repairs">General Repairs</option>
+                                        <option value="other">Other</option>
+                                    </select>
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="message">Project Details *</label>
+                                <textarea id="message" name="message" rows="5" required placeholder="Please describe your project, timeline, and any specific requirements..."></textarea>
+                            </div>
+                            
+                            <button type="submit" class="btn btn-primary">
+                                <i class="fas fa-paper-plane"></i>
+                                Send Message
+                            </button>
+                        </form>
+                    </div>
+
+                    <!-- Contact Information -->
+                    <div class="contact-info">
+                        <h2>Get in Touch</h2>
+                        
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <div>
+                                <h3>Phone</h3>
+                                <p><a href="tel:+13045550123">(304) 555-0123</a></p>
+                                <small>Mon-Fri: 7:00 AM - 6:00 PM</small>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <h3>Email</h3>
+                                <p><a href="mailto:info@custerkinney.com">info@custerkinney.com</a></p>
+                                <small>We respond within 24 hours</small>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <h3>Service Area</h3>
+                                <p>West Virginia</p>
+                                <small>Serving communities statewide</small>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <i class="fas fa-clock"></i>
+                            <div>
+                                <h3>Business Hours</h3>
+                                <p>Monday - Friday: 7:00 AM - 6:00 PM</p>
+                                <p>Saturday: 8:00 AM - 4:00 PM</p>
+                                <p>Sunday: Closed</p>
+                                <small>Emergency services available</small>
+                            </div>
+                        </div>
+
+                        <div class="emergency-contact">
+                            <h3>Emergency Services</h3>
+                            <p>For urgent repairs and emergencies:</p>
+                            <a href="tel:+13045550124" class="emergency-phone">
+                                <i class="fas fa-phone-alt"></i>
+                                (304) 555-0124
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="service-areas">
+            <div class="container">
+                <h2>Areas We Serve</h2>
+                <p>Custer & Kinney General Contracting LLC proudly serves communities throughout West Virginia, including:</p>
+                <div class="areas-grid">
+                    <div class="area-group">
+                        <h3>Eastern Panhandle</h3>
+                        <ul>
+                            <li>Martinsburg</li>
+                            <li>Charles Town</li>
+                            <li>Shepherdstown</li>
+                            <li>Harpers Ferry</li>
+                        </ul>
+                    </div>
+                    <div class="area-group">
+                        <h3>North Central</h3>
+                        <ul>
+                            <li>Morgantown</li>
+                            <li>Bridgeport</li>
+                            <li>Clarksburg</li>
+                            <li>Fairmont</li>
+                        </ul>
+                    </div>
+                    <div class="area-group">
+                        <h3>Charleston Area</h3>
+                        <ul>
+                            <li>Charleston</li>
+                            <li>Hurricane</li>
+                            <li>Cross Lanes</li>
+                            <li>South Charleston</li>
+                        </ul>
+                    </div>
+                    <div class="area-group">
+                        <h3>Eastern Region</h3>
+                        <ul>
+                            <li>Lewisburg</li>
+                            <li>Beckley</li>
+                            <li>Oak Hill</li>
+                            <li>Summersville</li>
+                        </ul>
+                    </div>
+                </div>
+                <p class="areas-note">Don't see your area listed? <a href="#contact-form">Contact us</a> - we may still be able to help!</p>
+            </div>
+        </section>
+
+        <section class="cta-section">
+            <div class="container">
+                <h2>Ready to Get Started?</h2>
+                <p>Free estimates • Licensed & Insured • 20+ Years Experience</p>
+                <div class="cta-buttons">
+                    <a href="tel:+13045550123" class="btn btn-primary">
+                        <i class="fas fa-phone"></i>
+                        Call Now
+                    </a>
+                    <a href="simulator.html" class="btn btn-secondary">
+                        <i class="fas fa-eye"></i>
+                        Try Simulator
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Custer & Kinney</h3>
+                    <p>General Contracting LLC</p>
+                    <p>Serving West Virginia with quality construction services since 2003.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="index.html#services">Home Renovations</a></li>
+                        <li><a href="index.html#services">New Construction</a></li>
+                        <li><a href="index.html#services">Roofing & Siding</a></li>
+                        <li><a href="index.html#services">Deck & Patio</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <p><i class="fas fa-phone"></i> (304) 555-0123</p>
+                    <p><i class="fas fa-envelope"></i> info@custerkinney.com</p>
+                    <p><i class="fas fa-map-marker-alt"></i> West Virginia</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Follow Us</h4>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Custer & Kinney General Contracting LLC. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script>
+        // Check for URL parameters to show success/error messages
+        window.addEventListener('DOMContentLoaded', function() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const successMsg = document.getElementById('success-message');
+            const errorMsg = document.getElementById('error-message');
+            
+            if (urlParams.get('success')) {
+                successMsg.style.display = 'block';
+                window.scrollTo(0, successMsg.offsetTop - 100);
+            } else if (urlParams.get('error')) {
+                errorMsg.style.display = 'block';
+                window.scrollTo(0, errorMsg.offsetTop - 100);
+            }
+        });
+    </script>
+</body>
+</html>
