@@ -1,0 +1,26 @@
+{
+    "name": "Custer & Kinney General Contracting LLC",
+    "short_name": "Custer & Kinney",
+    "description": "West Virginia's premier general contracting services with home renovation simulator",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#2C5530",
+    "theme_color": "#2C5530",
+    "orientation": "portrait-primary",
+    "categories": ["business", "construction", "home improvement"],
+    "icons": [
+        {
+            "src": "images/icon-192x192.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "images/icon-512x512.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ],
+    "scope": "/",
+    "lang": "en-US",
+    "dir": "ltr"
+}
